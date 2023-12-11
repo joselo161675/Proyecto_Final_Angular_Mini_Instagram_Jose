@@ -1,0 +1,60 @@
+/* Reset de márgenes y padding para la consistencia en todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.videos-container {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.videos-header {
+    background-color: gray;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.video-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.video-item {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para el último elemento de la lista sin borde inferior */
+.video-item:last-child {
+    border-bottom: none;
+}
+
+/* Ajustes en los estilos de la miniatura del video */
+.video-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block; /* Evita espacio adicional debajo de la miniatura */
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.video-title {
+    font-size: 16px;
+    margin: 0;
+}
+
+.video-description {
+    color: #777;
+    margin-top: 5px;
+}

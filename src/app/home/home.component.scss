@@ -1,0 +1,62 @@
+.section-profile {
+    width: 100%;
+    display: flex;
+
+    .container-image {
+        width: 150px;
+        height: 150px;
+        padding: 32px;
+    }
+
+    .section-data-profile {
+        padding: 32px;
+
+        > div {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            button {
+                padding: 4px;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    .section-statistic {
+        margin-top: 16px;
+    }
+
+    .section-miscellaneous {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.section-highlights {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 32px;
+
+    > *:hover {
+        cursor: pointer;
+    }
+}
+
+.section-posts {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .grid-posts {
+        display: grid;
+        width: 80%;
+        gap: 8px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+
+        *:hover {
+            cursor: pointer;
+        }
+    }
+}

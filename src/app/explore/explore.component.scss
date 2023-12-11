@@ -1,0 +1,62 @@
+.explore-container {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .explore-header {
+    background-color: gray;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+  }
+  
+  .explore-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .explore-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .explore-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .explore-item:hover .explore-overlay {
+    opacity: 1;
+  }
+  
+  .explore-overlay-content {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .explore-overlay-content h3 {
+    margin: 0;
+    font-size: 16px;
+  }

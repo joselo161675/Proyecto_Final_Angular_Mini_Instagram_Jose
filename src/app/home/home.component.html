@@ -1,0 +1,45 @@
+<section class="section-profile">
+    <!-- info perfil -->
+    <div class="container-image">
+        <app-image [image]="account?.infoaccount?.imageProfile!"></app-image>
+    </div>
+    <section class="section-data-profile">
+        <div>
+            <p>{{ account?.username! }}</p>
+            <button>Editar perfil</button>
+            <button>Ver archivo</button>
+            <i class="bi bi-gear-wide"></i>
+        </div>
+        <div class="section-statistic">
+            <div *ngFor="let statistic of areaStatistics; let i = index">
+                <app-badge color="transparent" [content]="statistic.total"></app-badge>
+            </div>
+        </div>
+        <div class="section-miscellaneous">
+            <app-badge [content]="threads.username"></app-badge>
+            <p *ngIf="!!account!.infoaccount.descripcion"> {{ account!.infoaccount.descripcion }} </p>
+        </div>
+    </section>
+</section>
+<section class="section-highlights">
+    <div *ngFor="let highlight of account!.highlights">
+        <app-highlight [src]="highlight.image" [title]="highlight.name"></app-highlight>
+    </div>
+    <div>
+        <app-highlight></app-highlight>
+    </div>
+</section>
+<section class="section-tabs">
+    <app-tabs [tabs]="tabs"></app-tabs>
+</section>
+<section class="section-posts">
+    <section class="grid-posts">
+        <div *ngFor="let post of account!.posts; let i = index;">
+        <a [routerLink]="['/pagina']" [queryParams]="{ imageId: post.id }">
+            <app-post [post]="post">
+            <img [src]="getImageUrl(post.id, 406, 406)" alt="Descripción de la imagen">
+            </app-post>
+        </a>
+        </div>
+    </section>
+</section>
