@@ -1,6 +1,6 @@
-import { MenuOption } from "../types/MenuOption.type";
+// import { MenuOption } from "../types/MenuOption.type";
 
-const menu: Array<MenuOption> = [
+const menu: Array<any> = [
     {
         icono: "bi-house",
         titulo: "Inicio",
